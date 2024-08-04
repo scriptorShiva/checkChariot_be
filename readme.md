@@ -1,13 +1,49 @@
-1. Use class based approach
-2. Divide things in multiple parts
-3. Describe payload : in a object or some formatt way
-4. Game flow :
-   a. first game start : JOIN GAME
-   b. we want to create a GAME class which calls when new Game is created by Game Handler
-   c. in GAME CLASS keep record of : GameId , players , board , moves , startTime
-   d. for make move : we have to do few things
-   a.1 : Validation -- Is user move valid
-   a.2 : update the board
-   a.3 : push the move
-   a.4 : check is the game is over or not
-   a.5 : send the updated board to the players
+# Real-time Chess Game
+
+A web-based multiplayer chess application with real-time gameplay, using modern technologies for a seamless experience.
+
+## Overview
+
+This project is a chess game that allows players to compete in real-time. It features a responsive user interface and real-time synchronization of game state and moves.
+
+## Key Features
+
+- **Real-Time Gameplay**: Instant move updates and synchronization using `Socket.IO`.
+- **Interactive Board**: Drag-and-drop functionality managed by `chess.js`.
+- **Modern UI**: Styled with `Tailwind CSS`, and enhanced with `shadcn` components and `React Toastify` for notifications.
+- **Efficient Routing**: Smooth navigation between the landing page and game board using `React Router DOM`.
+
+## Technologies
+
+- **Frontend**: 
+  - React
+  - Tailwind CSS
+  - React Router DOM
+  - React Toastify
+  - chess.js
+
+- **Backend**: 
+  - Node.js
+  - Express
+  - Socket.IO
+  - chess.js
+
+## Project Structure
+
+- **Frontend**: Components for the chess board, game status, and notifications.
+- **Backend**: 
+  - `GameHandler`: Manages game creation and tracking.
+  - `Game` class: Handles game logic, moves, and state updates.
+
+## Game Flow
+
+1. **Start Game**: Players join and a new game is initialized.
+2. **Make Moves**: Moves are validated and processed in real-time.
+3. **End Game**: Players receive notifications when the game ends.
+3. **Multiple Games**: Multiple instances of games can be run so that more than one games can be played.
+
+## Getting Started
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
